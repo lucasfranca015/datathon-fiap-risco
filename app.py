@@ -16,7 +16,7 @@ st.write("Insira os indicadores abaixo para calcular a probabilidade de risco.")
 col1, col2 = st.columns(2)
 
 with col1:
-    mat_media = st.number_input("Média Matemáticaaaaaaaaaaaaa", 0.0, 10.0, 5.0)
+    mat_media = st.number_input("Média Matemática", 0.0, 10.0, 5.0)
     psico_media = st.number_input("Média Psicossocial", 0.0, 10.0, 5.0)
     engaj_media = st.number_input("Média Engajamento", 0.0, 10.0, 5.0)
     delta_mat = st.number_input("Delta Matemática", -10.0, 10.0, 0.0)
@@ -48,4 +48,5 @@ if st.button("Calcular Risco"):
         st.error(f"Risco Detectado: {risco}")
     else:
         st.success(f"Risco Detectado: {risco}")
+
     st.metric("Probabilidade de Risco", f"{prob*100:.2f}%")
