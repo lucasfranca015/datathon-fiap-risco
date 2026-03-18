@@ -53,7 +53,7 @@ Se desejar rodar o projeto no seu computador:
    ```
 3. Instale as dependências:
   ```bash
-  pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 4. Inicie o app:
    ```bash
