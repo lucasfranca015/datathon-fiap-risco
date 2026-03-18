@@ -1,53 +1,64 @@
-📊 Monitoramento de Risco Estudantil - Datathon FIAP
-Este projeto consiste em uma aplicação web interativa desenvolvida com Streamlit para prever a probabilidade de risco de alunos com base em indicadores educacionais, psicossociais e de engajamento.
+# 📊 Monitoramento de Risco Estudantil - Datathon FIAP
 
-O modelo de Machine Learning utiliza algoritmos de classificação (Random Forest) para identificar padrões e auxiliar na tomada de decisão pedagógica.
+Este projeto é uma aplicação web desenvolvida com **Streamlit** que utiliza Machine Learning para prever o risco de evasão ou baixo desempenho de alunos. O modelo foi treinado com base em indicadores de notas, comportamento psicossocial e engajamento.
 
-📁 Estrutura do Repositório
-A organização do projeto segue a estrutura abaixo para garantir a modularidade e facilitar o deploy:
+## 📁 Estrutura do Repositório
 
-script_streamlit/: Contém o código da interface do usuário (app.py) e as dependências específicas do servidor.
+Organizamos o repositório para facilitar a manutenção e o deploy automático:
 
-script_modelo/: Armazena os artefatos do modelo treinado (.pkl) e a lista de colunas necessárias para a predição.
+* **`script_streamlit/`**: Contém o arquivo `app.py` (interface do usuário) e o `requirements.txt`.
+* **`script_modelo/`**: Contém os arquivos binários do modelo (`modelo_risco_final.pkl`) e a lista de colunas (`colunas_modelo.pkl`).
+* **Raiz**: Arquivos de configuração e documentação.
 
-notebooks/ (Opcional): Espaço destinado aos arquivos de análise exploratória e treinamento do modelo.
+---
 
-data/ (Opcional): Base de dados utilizada no projeto (respeitando a LGPD).
+## 🛠️ Tecnologias e Versões
 
-🛠️ Tecnologias Utilizadas
-Python 3.11
+Para evitar erros de compatibilidade, o ambiente de produção utiliza:
+* **Python 3.11**
+* **Scikit-Learn 1.6.1**
+* **Streamlit 1.55.0**
+* **Joblib** (para carregamento do modelo)
 
-Streamlit: Interface Web.
+---
 
-Scikit-Learn 1.6.1: Inteligência Artificial e Machine Learning.
+## 🧠 Variáveis Analisadas
 
-Pandas & Numpy: Manipulação de dados.
+O modelo de predição utiliza os seguintes campos para gerar o diagnóstico:
 
-Joblib: Persistência do modelo.
+| Variável | Descrição |
+| :--- | :--- |
+| **Média Matemática** | Média das notas de exatas. |
+| **Média Português** | Média das notas de linguagens. |
+| **Média Psicossocial** | Avaliação de comportamento e socialização. |
+| **Média Autoavaliação** | Percepção do próprio aluno sobre seu desempenho. |
+| **Média Engajamento** | Nível de participação em atividades. |
+| **Anos na Instituição** | Tempo de permanência do aluno na escola. |
+| **Pedras (2022/2024)** | Nível de classificação (0 a 4) nos anos correspondentes. |
+| **Deltas** | Evolução ou queda de desempenho entre os períodos. |
 
-🚀 Como Executar o Projeto
-1. Requisitos
-Certifique-se de ter o Python 3.11 instalado. É recomendável o uso de um ambiente virtual.
+---
 
-2. Instalação
-Bash
-# Clone o repositório
-git clone https://github.com/lucasfranca015/datathon-fiap-risco.git
+## 🚀 Como Executar Localmente
 
-# Entre na pasta do script
-cd script_streamlit
+Se desejar rodar o projeto no seu computador:
 
-# Instale as dependências
-pip install -r requirements.txt
-3. Rodar a Aplicação
-Bash
-streamlit run app.py
-🧠 Variáveis do Modelo
-O modelo analisa os seguintes indicadores para calcular o risco:
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/lucasfranca015/datathon-fiap-risco.git](https://github.com/lucasfranca015/datathon-fiap-risco.git)
 
-Variável	Descrição
-Média Matemática	Desempenho em avaliações de exatas.
-Média Português	Desempenho em avaliações de linguagens.
-Média Psicossocial	Indicadores de comportamento e bem-estar.
-Deltas	Evolução das notas entre períodos.
-Pedras (2022/2024)	Nível de classificação institucional do aluno.
+2. Acesse a pasta do script:
+   ```bash
+   cd script_streamlit
+   
+3. Instale as dependências:
+  ```bash
+  pip install -r requirements.txt
+
+4. Inicie o app:
+   ```bash
+   streamlit run app.py
+
+🔗 Deploy Online
+O app está configurado para deploy automático no Streamlit Cloud.
+👉 Acesse o Dashboard de Risco [Aqui](https://datathon-fiap-risco-r9bswmxgnsz6mmkqbxqvee.streamlit.app/)
