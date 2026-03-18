@@ -46,19 +46,20 @@ Se desejar rodar o projeto no seu computador:
 1. Clone o repositório:
    ```bash
    git clone [https://github.com/lucasfranca015/datathon-fiap-risco.git](https://github.com/lucasfranca015/datathon-fiap-risco.git)
-
+   ```
 2. Acesse a pasta do script:
    ```bash
    cd script_streamlit
-   
+   ```
 3. Instale as dependências:
   ```bash
   pip install -r requirements.txt
-
+   ```
 4. Inicie o app:
    ```bash
    streamlit run app.py
-
+   ```
+   
 🔗 Deploy Online
 O app está configurado para deploy automático no Streamlit Cloud.
 👉 Acesse o Dashboard de Risco [Aqui](https://datathon-fiap-risco-r9bswmxgnsz6mmkqbxqvee.streamlit.app/)
