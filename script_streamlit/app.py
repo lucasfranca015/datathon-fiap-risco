@@ -6,8 +6,8 @@ import joblib
 st.set_page_config(page_title="Monitoramento de Risco Estudantil", layout="wide")
 
 # Carregamento dos artefatos do modelo
-modelo = joblib.load('modelo_risco_final.pkl')
-features_finais = joblib.load('colunas_modelo.pkl')
+modelo = joblib.load('script_modelo/modelo_risco_final.pkl')
+features_finais = joblib.load('script_modelo/colunas_modelo.pkl')
 
 st.title("📊 Preditor de Risco do Aluno")
 st.write("Insira os indicadores abaixo para calcular a probabilidade de risco.")
