@@ -60,6 +60,8 @@ Se desejar rodar o projeto no seu computador:
    streamlit run app.py
    ```
    
-🔗 Deploy Online
+## 🔗 Deploy Online
+
 O app está configurado para deploy automático no Streamlit Cloud.
+
 👉 Acesse o Dashboard de Risco [Aqui](https://datathon-fiap-risco-r9bswmxgnsz6mmkqbxqvee.streamlit.app/)
